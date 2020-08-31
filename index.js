@@ -4,14 +4,18 @@ const inquirer = require('inquirer');
 const thenableWriteFile = util.promisify(fs.writeFile);
 function getReadMeOutput(answers) {
 
-    const title = answers.title;
-    const description = answers.description;
+    // const title = answers.title;
+    // const description = answers.description;
+    // const installation = answers.installation;
+    // const usage = answers.usage;
+    // const contribution = answers.contribution;
+    // const testGuide = answers.testGuide;
 
-    return `# ${title}
+    return `# ${answers.title}
 
     ## Description 
     
-    ${description}
+    ${answers.description}
     
     
     ## Table of Contents (Optional)
@@ -26,12 +30,12 @@ function getReadMeOutput(answers) {
     
     ## Installation
     
-    What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+    ${answers.installation}
     
     
     ## Usage 
     
-    Provide instructions and examples for use. Include screenshots as needed. 
+    ${answers.usage}
     
     
     ## Credits
@@ -62,11 +66,11 @@ function getReadMeOutput(answers) {
     
     ## Contributing
     
-    If you created an application or package and would like other developers to contribute it, you will want to add guidelines for how to do so. The [Contributor Covenant](https://www.contributor-covenant.org/) is an industry standard, but you can always write your own.
+    ${answers.contribution}
     
     ## Tests
     
-    Go the extra mile and write tests for your application. Then provide examples on how to run them.
+    ${answers.tests}
     
     
     `
@@ -75,14 +79,45 @@ function getReadMeOutput(answers) {
 inquirer 
 .prompt([
     {
+        type: "input",
         name: 'title',
         message: 'What is the title of your project?'
     },
     {
+        type: "input",
         name: 'description',
         message: 'What is the description of your project?'
-    }
+    },
+    {
+        type: "input",
+        name: 'installation',
+        message: "What are the steps required to install your project?"
+    },
+    {
+        type: "input",
+        name: 'usage',
+        message: 'Waht are the instuctions for the project and examples for use?'
+    },
+    {
+        type: "input",
+        name: "contribution",
+        message: "What are the conribution guidelines?"
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Do you have any tests for your project?"
+    },
+
+
 ])
 .then(function(answers) {
-    console.log(getReadMeOutput(answers));
+    const readMe = getReadMeOutput(answers);
+    return thenableWriteFile("README(generated).md", readMe)
+})
+.then(function() {
+    console.log("Successfully generated README")
+})
+.catch(function(error){
+    console.log("An error has occured", error)
 })
