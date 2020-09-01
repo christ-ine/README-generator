@@ -2,6 +2,55 @@ const fs = require('fs');
 const util = require('util');
 const inquirer = require('inquirer');
 const thenableWriteFile = util.promisify(fs.writeFile);
+
+
+
+
+function promptUser() {
+return inquirer.prompt([
+    {
+        type: "input",
+        name: 'title',
+        message: 'What is the title of your project?'
+    },
+    {
+        type: "input",
+        name: 'description',
+        message: 'What is the description of your project?'
+    },
+    {
+        type: "input",
+        name: 'installation',
+        message: "What are the steps required to install your project?"
+    },
+    {
+        type: "input",
+        name: 'usage',
+        message: 'Waht are the instuctions for the project and examples for use?'
+    },
+    {
+        type: "input",
+        name: "contribution",
+        message: "What are the conribution guidelines?"
+    },
+    {
+        type: "input",
+        name: "tests",
+        message: "Do you have any tests for your project?"
+    },
+    {
+        type: "list",
+        name: "license",
+        choices: ["MIT", "Apache", "GPL"]
+    }   
+
+
+]);
+}
+// .then(promptResponses => {
+    
+// })
+
 function getReadMeOutput(answers) {
 
     // const title = answers.title;
@@ -10,7 +59,16 @@ function getReadMeOutput(answers) {
     // const usage = answers.usage;
     // const contribution = answers.contribution;
     // const testGuide = answers.testGuide;
+    const license = answers.license;
 
+    if(license === "MIT") {
+        answers.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+    } else if (license === "Apache") {
+        answers.license = "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)";
+    } else {
+        answers.license = "[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)";
+    }
+        
     return `# ${answers.title}
 
     ## Description 
@@ -51,6 +109,7 @@ function getReadMeOutput(answers) {
     ## License
     
     The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
+    ${answers.license}
     
     
     ---
@@ -76,41 +135,8 @@ function getReadMeOutput(answers) {
     `
 }
 
-inquirer 
-.prompt([
-    {
-        type: "input",
-        name: 'title',
-        message: 'What is the title of your project?'
-    },
-    {
-        type: "input",
-        name: 'description',
-        message: 'What is the description of your project?'
-    },
-    {
-        type: "input",
-        name: 'installation',
-        message: "What are the steps required to install your project?"
-    },
-    {
-        type: "input",
-        name: 'usage',
-        message: 'Waht are the instuctions for the project and examples for use?'
-    },
-    {
-        type: "input",
-        name: "contribution",
-        message: "What are the conribution guidelines?"
-    },
-    {
-        type: "input",
-        name: "tests",
-        message: "Do you have any tests for your project?"
-    },
 
-
-])
+promptUser()
 .then(function(answers) {
     const readMe = getReadMeOutput(answers);
     return thenableWriteFile("README(generated).md", readMe)
