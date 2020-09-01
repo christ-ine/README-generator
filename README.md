@@ -1,11 +1,11 @@
 # README Generator
 
-    ## Description 
+## Description
     
     Every project needs a README, but oftentimes READMEs are an afterthought in a developer's mind. It sometimes becomes tedious formatting a README for every repository. This application seeks to eliminate tedious portion of creating a README and allows a user to focus on the important content. It prompts you using questions and the user's answers are used to generate a README file that the user can add to the project of their choosing. Users no longer have to worry about missing a crucial section of their README. 
     
     
-    ## Table of Contents
+## Table of Contents
     
     
     
@@ -16,20 +16,20 @@
     * [Questions](#questions)
     
     
-    ## Installation
+## Installation
     
     To install, run "npm install" in command line. Then run "node index.js" in command line. Answer prompts by inputting answers or selecting answers using arrow keys. Press enter after each answer to submit. README file will be generated after all answers are submitted.
     
     
-    ## Usage 
+## Usage 
     
     When the user runs the application, they will be prompted with a series of questions. The user will answer each question by inputting an answer or selecting an answer using arrow keys. When they are done answering a question, they will press enter to submit. A README file will be generated using their answers to the questions, and they will be able to use this README for any project of their choosing
     
-    ## License
+ ## License
     
     MIT License
 
-        Copyright (c) 2020 Christine Ross
+    Copyright (c) 2020 Christine Ross
         
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
@@ -49,18 +49,17 @@
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
     
-    ## Badges
+## Badges
     
     [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
-    ## Contributing
+## Contributing
     
     Any contributions welcome.
     
-    ## Questions
+## Questions
 
     Have any additional questions? Contact me below!
 
     * [GitHub](https://github.com/christ-ine)
     * [Email me!](mailto:christinejoyross@gmail.com)
-    
