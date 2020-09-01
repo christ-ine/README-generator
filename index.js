@@ -3,9 +3,6 @@ const util = require('util');
 const inquirer = require('inquirer');
 const thenableWriteFile = util.promisify(fs.writeFile);
 
-
-
-
 function promptUser() {
 return inquirer.prompt([
     {
@@ -26,7 +23,7 @@ return inquirer.prompt([
     {
         type: "input",
         name: 'usage',
-        message: 'Waht are the instuctions for the project and examples for use?'
+        message: 'Waht are the instructions for the project and examples for use?'
     },
     {
         type: "input",
@@ -62,18 +59,10 @@ return inquirer.prompt([
 
 ]);
 }
-// .then(promptResponses => {
-    
-// })
+
 
 function getReadMeOutput(answers) {
 
-    // const title = answers.title;
-    // const description = answers.description;
-    // const installation = answers.installation;
-    // const usage = answers.usage;
-    // const contribution = answers.contribution;
-    // const testGuide = answers.testGuide;
     const license = answers.license;
     const licenseDescription = answers.licenseDescription;
 
@@ -149,9 +138,11 @@ function getReadMeOutput(answers) {
     
     * [Installation](#installation)
     * [Usage](#usage)
-    * [Credits](#credits)
     * [License](#license)
-    
+    * [Badges](#badges)
+    * [Contributing](#contributing)
+    * [Tests](#tests)
+    * [Questions](#questions)
     
     ## Installation
     
@@ -161,17 +152,6 @@ function getReadMeOutput(answers) {
     ## Usage 
     
     ${answers.usage}
-    
-    
-    ## Credits
-    
-    List your collaborators, if any, with links to their GitHub profiles.
-    
-    If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-    
-    If you followed tutorials, include links to those here as well.
-    
-    
     
     ## License
     
