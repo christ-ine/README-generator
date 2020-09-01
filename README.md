@@ -2,34 +2,32 @@
 
 ## Description
     
-    Every project needs a README, but oftentimes READMEs are an afterthought in a developer's mind. It sometimes becomes tedious formatting a README for every repository. This application seeks to eliminate tedious portion of creating a README and allows a user to focus on the important content. It prompts you using questions and the user's answers are used to generate a README file that the user can add to the project of their choosing. Users no longer have to worry about missing a crucial section of their README. 
+Every project needs a README, but oftentimes READMEs are an afterthought in a developer's mind. It sometimes becomes tedious formatting a README for every repository. This application seeks to eliminate tedious portion of creating a README and allows a user to focus on the important content. It prompts you using questions and the user's answers are used to generate a README file that the user can add to the project of their choosing. Users no longer have to worry about missing a crucial section of their README. 
     
     
 ## Table of Contents
     
-    
-    
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [License](#license)
-    * [Badges](#badges)
-    * [Questions](#questions)
+* [Installation](#installation)
+* [Usage](#usage)
+* [License](#license)
+* [Badges](#badges)
+* [Questions](#questions)
     
     
 ## Installation
     
-    To install, run "npm install" in command line. Then run "node index.js" in command line. Answer prompts by inputting answers or selecting answers using arrow keys. Press enter after each answer to submit. README file will be generated after all answers are submitted.
+To install, run "npm install" in command line. Then run "node index.js" in command line. Answer prompts by inputting answers or selecting answers using arrow keys. Press enter after each answer to submit. README file will be generated after all answers are submitted.
     
     
 ## Usage 
     
-    When the user runs the application, they will be prompted with a series of questions. The user will answer each question by inputting an answer or selecting an answer using arrow keys. When they are done answering a question, they will press enter to submit. A README file will be generated using their answers to the questions, and they will be able to use this README for any project of their choosing
+When the user runs the application, they will be prompted with a series of questions. The user will answer each question by inputting an answer or selecting an answer using arrow keys. When they are done answering a question, they will press enter to submit. A README file will be generated using their answers to the questions, and they will be able to use this README for any project of their choosing
     
  ## License
     
-    MIT License
+MIT License
 
-    Copyright (c) 2020 Christine Ross
+Copyright (c) 2020 Christine Ross
         
         Permission is hereby granted, free of charge, to any person obtaining a copy
         of this software and associated documentation files (the "Software"), to deal
@@ -51,15 +49,15 @@
     
 ## Badges
     
-    [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
 ## Contributing
     
-    Any contributions welcome.
+Any contributions welcome.
     
 ## Questions
 
-    Have any additional questions? Contact me below!
+Have any additional questions? Contact me below!
 
-    * [GitHub](https://github.com/christ-ine)
-    * [Email me!](mailto:christinejoyross@gmail.com)
+* [GitHub](https://github.com/christ-ine)
+* [Email me!](mailto:christinejoyross@gmail.com)
