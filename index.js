@@ -42,7 +42,17 @@ return inquirer.prompt([
         type: "list",
         name: "license",
         choices: ["MIT", "Apache", "GPL"]
-    }   
+    },
+    {
+        type: "input",
+        name: "username",
+        message: "Please enter your github username"
+    },
+    {
+        type: "input",
+        name: "email",
+        message: "Please enter your email address"
+    }
 
 
 ]);
@@ -60,6 +70,7 @@ function getReadMeOutput(answers) {
     // const contribution = answers.contribution;
     // const testGuide = answers.testGuide;
     const license = answers.license;
+    const licenseDescription = answers.licenseDescription;
 
     if(license === "MIT") {
         answers.license = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
@@ -76,9 +87,9 @@ function getReadMeOutput(answers) {
     ${answers.description}
     
     
-    ## Table of Contents (Optional)
+    ## Table of Contents
     
-    If your README is very long, add a table of contents to make it easy for users to find what they need.
+    
     
     * [Installation](#installation)
     * [Usage](#usage)
@@ -108,20 +119,23 @@ function getReadMeOutput(answers) {
     
     ## License
     
-    The last section of a good README is a license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, use [https://choosealicense.com/](https://choosealicense.com/)
-    ${answers.license}
+    ${answers.licenseDescription}
     
+
+    ## Questions
+
+    Have any additional questions? Contact me below!
+
+    * [GitHub](https://github.com/${answers.username})
+    * [Email me!](mailto:${answers.email})
     
-    ---
-    
-    🏆 The sections listed above are the minimum for a good README, but your project will ultimately determine the content of this document. You might also want to consider adding the following sections.
     
     ## Badges
     
     ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)
     
-    Badges aren't _necessary_, per se, but they demonstrate street cred. Badges let other developers know that you know what you're doing. Check out the badges hosted by [shields.io](https://shields.io/). You may not understand what they all represent now, but you will in time.
     
+    ${answers.license}
     
     ## Contributing
     
