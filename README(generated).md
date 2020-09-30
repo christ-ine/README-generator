@@ -1,8 +1,10 @@
-# Sample README
+# Employee Management System
 
 ## Description 
+
+* [Screenrecording](https://drive.google.com/file/d/17jlEbl3tp5oNpkbajdL-N_9WKjt7DWW3/view)
     
-This is a sample description.
+Company rosters are often hard to management. This app seeks to remedy this problem by providing an easy, straightforward method to obtain department, role, salary, and manager information about every employee. It also provides an easy method to add new employees, update employee information, and remove employees. 
     
     
 ## Table of Contents
@@ -19,40 +21,48 @@ This is a sample description.
     
 ## Installation
     
-these are the sample steps to install
+To install run `npm install` in your command line.
     
     
 ## Usage 
     
-these are the sample instructions 
+To start, run `npm start`. A main menu will appear and the user will be able to select which action they would like to do using the arrow keys. The user simply has to follow the prompts and input/select the answers they desire.
     
 ## License
     
-Copyright 2020 Christine Ross
+MIT License
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
+Copyright (c) 2020 Christine Ross
         
-    http://www.apache.org/licenses/LICENSE-2.0
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
         
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+        
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
     
 ## Badges
     
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
     
 ## Contributing
     
-these are the sample contributing guidelines
+Anyone can contribute
     
 ## Tests
     
-Sample tests here
+
 
 ## Questions
 
